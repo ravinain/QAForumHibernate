@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.qaforum.bo.LoginInfoBO" table="login_info">
+        <id name="loginId" type="string">
+            <column name="login_id" not-null="true" unique="true" />
+        </id>
+        <property  name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="isLogin" type="boolean">
+            <column name="is_login" />
+        </property>
+        <property name="lastLoginDt" type="date">
+            <column name="last_login_dt" />
+        </property>
+        <property name="lastLoginIpAddress" type="string">
+            <column name="last_login_ip_address" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="updated_by" />
+        </property>
+        <property name="insertedBy" type="string">
+            <column name="inserted_by" />
+        </property>
+        <property name="updatedDt" type="date">
+            <column name="updated_dt" />
+        </property>
+        <property name="insertedDt" type="date">
+            <column name="inserted_dt" />
+        </property>
+        <property name="sessionId" type="string">
+            <column name="session_id" />
+        </property>
+    </class>
+    
+</hibernate-mapping>
